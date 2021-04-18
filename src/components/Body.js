@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { useFetch } from '../hooks/useFetch'
-import { Col, Container, Image, OverlayTrigger, Row, Spinner, Tooltip } from "react-bootstrap";
+import { Button, Col, Container, Image, Modal, OverlayTrigger, Row, Spinner, Tooltip } from "react-bootstrap";
+import { ModalComponent } from './ModalComponent';
 import refresh from '../assets/refresh.jpg'
 
 export const Body = () => {
     
+    //Fetch petition (from useFetch Hook)
     const [state, setstate] = useState('https://coinranking1.p.rapidapi.com/coins')
 
     const url = state
@@ -12,11 +14,15 @@ export const Body = () => {
     const {data, loading} = useFetch(url);
     
     // loading? console.log('loading'): data.data.coins.map(items => console.log(items))
+    
+    //Refresh Button Helper
     const loader = ()=> { 
         setstate('nothing');
         console.log('Loading...')
     }
 
+
+    //Refresh Button
     const handleRefresh = () =>{
     loader();
     setTimeout(() => {
@@ -28,13 +34,12 @@ export const Body = () => {
     }
 
 
-    //  vvvv Overlay Bootstrap vvvv
+    // Overlay Bootstrap 
     const renderTooltip = (props) => ( 
         <Tooltip id="button-tooltip" {...props}>
           Refresh
         </Tooltip>
       );
-
 
 
     return (
@@ -47,7 +52,7 @@ export const Body = () => {
                   delay={{ show: 250, hide: 400 }}
                   overlay={renderTooltip}
                 >
-                <Image   onClick={handleRefresh}
+                <Image  onClick={handleRefresh}
                         className= "boton"
                         src={refresh}
                         alt="Refresh Button"
@@ -72,18 +77,20 @@ export const Body = () => {
                 :
                 
                  data.data.coins.map(items =>
-                    <Row key={items.id} className="fila animate__animated animate__fadeIn">
-        
+                    <Row 
+                         key={items.id} 
+                         className="fila animate__animated animate__fadeIn">
+                                                
                         <Col xs={12} md={1}> <Image  src={items.iconUrl}
                                      alt={items.name} 
                                      roundedCircle 
                                      className='imagenes' /> 
                         </Col>
                         <Col> <p className="items nombre">{items.name}</p> </Col>
-                        <Col> <p className= "items">{items.price}</p> </Col>
+                        <Col> <p className= "items">{parseFloat(items.price).toFixed(2)}</p> </Col>
                         <Col> <p className={`items ${items.change > 0 ? "verde" : "rojo"}`}>{items.change}</p> </Col>
                    </Row>
-                    )     
+                )     
            }
            </Container>
         </div>
