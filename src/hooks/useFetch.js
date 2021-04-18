@@ -30,7 +30,8 @@ export const useFetch = (url) => {
 					error: null,
 					data,
 				});
-			});
+			})
+			.catch(err => { console.log('Waiting for data') } );
 	}, [url]);
 
 	return state;

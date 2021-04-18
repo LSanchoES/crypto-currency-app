@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useFetch } from '../hooks/useFetch'
-import { Button, Col, Container, Image, Row, Spinner } from "react-bootstrap";
+import { Col, Container, Image, OverlayTrigger, Row, Spinner, Tooltip } from "react-bootstrap";
+import refresh from '../assets/refresh.jpg'
 
 export const Body = () => {
     
@@ -27,22 +28,39 @@ export const Body = () => {
     }
 
 
+    //  vvvv Overlay Bootstrap vvvv
+    const renderTooltip = (props) => ( 
+        <Tooltip id="button-tooltip" {...props}>
+          Refresh
+        </Tooltip>
+      );
+
+
+
     return (
         <div>
             <Container className="container-body animate__animated animate__fadeIn">
 
             <Row className=" justify-content-center boton-fila">
-                <Button onClick={handleRefresh}
+            <OverlayTrigger
+                  placement="right"
+                  delay={{ show: 250, hide: 400 }}
+                  overlay={renderTooltip}
+                >
+                <Image   onClick={handleRefresh}
                         className= "boton"
-                >   
-                Refresh
-                </Button>
+                        src={refresh}
+                        alt="Refresh Button"
+                />   
+                </OverlayTrigger>
+               
             </Row>
 
             <Row className="fila-superior">
-                <Col> <p className="items-superior nombre">Crypto Currency</p> </Col>
-                <Col> <p className="items-superior">Price ($)</p> </Col>
-                <Col> <p className="items-superior">Change rate ($)</p> </Col>
+                <Col xs={1}><span></span></Col>
+                <Col> <p className="items-superior nombre">CRYPTO CURRENCY</p> </Col>
+                <Col> <p className="items-superior">PRICE ($)</p> </Col>
+                <Col> <p className="items-superior">CHANGE RATE($)</p> </Col>
             </Row>
            {
                 loading? 
@@ -62,11 +80,10 @@ export const Body = () => {
                                      className='imagenes' /> 
                         </Col>
                         <Col> <p className="items nombre">{items.name}</p> </Col>
-                        <Col> <p className="items">{items.price}</p> </Col>
-                        <Col> <p className="items">{items.change}</p> </Col>
-
+                        <Col> <p className= "items">{items.price}</p> </Col>
+                        <Col> <p className={`items ${items.change > 0 ? "verde" : "rojo"}`}>{items.change}</p> </Col>
                    </Row>
-                    ) 
+                    )     
            }
            </Container>
         </div>
