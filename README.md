@@ -5,4 +5,9 @@
 Desarrollada completamente por Lorenzo Sancho, consumiendo API de valores
 de todas las criptomonedas en tiempo real
 
-//TODO: Descripcion de las cryptos como modal o tooltip
+En esta app se ha trabajado con:
+
+- React
+- Fetch (Api Rest)
+- React Hooks
+- React Bootstrap
