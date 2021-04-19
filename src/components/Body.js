@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useFetch } from '../hooks/useFetch'
 import { Button, Col, Container, Image, Modal, OverlayTrigger, Row, Spinner, Tooltip } from "react-bootstrap";
 import { ModalComponent } from './ModalComponent';
-import refresh from '../assets/refresh.jpg'
+// import refresh from '../assets/refresh.jpg'
 
 export const Body = () => {
     
@@ -54,7 +54,8 @@ export const Body = () => {
                 >
                 <Image  onClick={handleRefresh}
                         className= "boton"
-                        src={refresh}
+                        src='../../public/assets/refresh.jpg'
+
                         alt="Refresh Button"
                 />   
                 </OverlayTrigger>
