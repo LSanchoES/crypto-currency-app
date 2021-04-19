@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Media } from "react-bootstrap";
-// import videoLand from "../assets/landing-video.mp4";
+import videoLand from "../assets/landing-video.mp4";
 
 export const Head = () => {
 	return (
@@ -11,7 +11,8 @@ export const Head = () => {
                 autoPlay
                 muted 
                 className="video animate__animated animate__fadeIn">
-					<source src= "../../public/assets/landing-video.mp4" type="video/mp4" />
+					<source src= {videoLand}
+							type="video/mp4" />
 					Your browser does not support the video tag. I suggest you upgrade your
 					browser.
 				</video>
