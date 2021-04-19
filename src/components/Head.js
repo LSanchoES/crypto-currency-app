@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Media } from "react-bootstrap";
-import videoLand from "../assets/landing-video.mp4";
+import videoLand from "./../assets/landing-video.mp4";
 
 export const Head = () => {
 	return (
