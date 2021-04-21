@@ -10,7 +10,7 @@
     border-radius: 4px;
     align-items: center;
     background: #bae8e8;
-    box-shadow: 0px 0px 1px #181818;
+    box-shadow: -1px -2px 3px #181818 inset, -1px -2px 13px #186817 inset;
     color: #181818;
 
 }
@@ -78,7 +78,7 @@
 }
 .boton{
     box-shadow: 0px 0px 5px #181811;
-
+    border-radius: 999px;
     padding: 2px;
     width: 50px;
     margin-bottom: 5px ;
@@ -89,17 +89,19 @@
     box-shadow:0px 0px 5px#181811;
     color: black ; 
     cursor: pointer;
-    transform: translate(-2px , -2px );
+    transform: translate(2px , -2px );
+    
 }
 .boton:active{
     background:#50c4cf ;
     box-shadow:0px 0px 10px #fffffe inset ;
-    color: black ;
+    border: 2px solid #ffd803;
+    
 }
 .boton::after{
     background:#50c4cf ;
     box-shadow:0px 0px 10px #fffffe inset ;
-    color: black ;
+    border: 2px solid #ffd803;
 }
 .spin{
     display: flex;
@@ -165,6 +167,27 @@
     color: green !important;
     font-weight: bold;
 }
+.info{
+    display: flex;
+    justify-content: flex-start;
+}
+.infobtn{
+    width: 100%;
+    height: 50px;
+    bottom: 10px;
+    position: absolute;
+    background-color: transparent;
+    
+}
+.infobtn:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    
+}
+.grafico{
+
+}
 
 @media(max-width: 1079px){
     .titulo{
@@ -213,7 +236,7 @@
         padding: 0px;
         font-weight: bold;
         margin-left: 0px;
-        font-size: 10px;
+        font-size: 12px;
         
     }
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useFetch } from '../hooks/useFetch'
-import { Button, Col, Container, Image, Modal, OverlayTrigger, Row, Spinner, Tooltip } from "react-bootstrap";
+import { Col, Container, Image, OverlayTrigger, Row, Spinner, Tooltip } from "react-bootstrap";
 import { ModalComponent } from './ModalComponent';
 import refresh from './../assets/refresh.jpg'
 
@@ -33,7 +33,6 @@ export const Body = () => {
         
     }
 
-
     // Overlay Bootstrap 
     const renderTooltip = (props) => ( 
         <Tooltip id="button-tooltip" {...props}>
@@ -41,10 +40,18 @@ export const Body = () => {
         </Tooltip>
       );
 
+    //Modal
+
+
+
 
     return (
         <div>
             <Container className="container-body animate__animated animate__fadeIn">
+
+
+
+        
 
             <Row className=" justify-content-center boton-fila">
             <OverlayTrigger
@@ -67,6 +74,7 @@ export const Body = () => {
                 <Col> <p className="items-superior nombre">CRYPTO CURRENCY</p> </Col>
                 <Col> <p className="items-superior">PRICE ($)</p> </Col>
                 <Col> <p className="items-superior">CHANGE RATE($)</p> </Col>
+
             </Row>
            {
                 loading? 
@@ -85,11 +93,14 @@ export const Body = () => {
                         <Col xs={12} md={1}> <Image  src={items.iconUrl}
                                      alt={items.name} 
                                      roundedCircle 
-                                     className='imagenes' /> 
+                                     className='imagenes'
+                                     /> 
+                                     
                         </Col>
                         <Col> <p className="items nombre">{items.name}</p> </Col>
                         <Col> <p className= "items">{parseFloat(items.price).toFixed(2)}</p> </Col>
                         <Col> <p className={`items ${items.change > 0 ? "verde" : "rojo"}`}>{items.change}</p> </Col>
+                        <Col xs={12} className="info"><ModalComponent items = {items} /></Col>
                    </Row>
                 )     
            }
