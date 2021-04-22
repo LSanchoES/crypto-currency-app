@@ -23,7 +23,7 @@ export const ModalComponent = (items) => {
 					<Modal.Title>{items.items.name} Last 26 Days</Modal.Title>
 				</Modal.Header>
 
-				<Modal.Body> 
+				<Modal.Body className="graph-container"> 
 					<ChartComponent items={items} />
 				</Modal.Body>
 

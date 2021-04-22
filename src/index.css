@@ -12,7 +12,10 @@
     background: #bae8e8;
     box-shadow: -1px -2px 3px #181818 inset, -1px -2px 13px #186817 inset;
     color: #181818;
-
+    transition: all 300ms;
+}
+.fila:hover{
+    background:  #bae8e86e;
 }
 .fila-superior{
     margin-top: 0px;
@@ -187,6 +190,11 @@
 }
 .grafico{
 
+}
+.graph-container{
+
+    width: 100%;
+    height: 400px;
 }
 
 @media(max-width: 1079px){
