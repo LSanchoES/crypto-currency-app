@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/crypto-currency-app/static/css/main.a3f7c8a8.chunk.css",
-    "main.js": "/crypto-currency-app/static/js/main.9b5590dd.chunk.js",
-    "main.js.map": "/crypto-currency-app/static/js/main.9b5590dd.chunk.js.map",
+    "main.css": "/crypto-currency-app/static/css/main.ac104cfe.chunk.css",
+    "main.js": "/crypto-currency-app/static/js/main.051cb20a.chunk.js",
+    "main.js.map": "/crypto-currency-app/static/js/main.051cb20a.chunk.js.map",
     "runtime-main.js": "/crypto-currency-app/static/js/runtime-main.972a643b.js",
     "runtime-main.js.map": "/crypto-currency-app/static/js/runtime-main.972a643b.js.map",
-    "static/js/2.010d6084.chunk.js": "/crypto-currency-app/static/js/2.010d6084.chunk.js",
-    "static/js/2.010d6084.chunk.js.map": "/crypto-currency-app/static/js/2.010d6084.chunk.js.map",
+    "static/js/2.faacb16f.chunk.js": "/crypto-currency-app/static/js/2.faacb16f.chunk.js",
+    "static/js/2.faacb16f.chunk.js.map": "/crypto-currency-app/static/js/2.faacb16f.chunk.js.map",
     "index.html": "/crypto-currency-app/index.html",
-    "static/css/main.a3f7c8a8.chunk.css.map": "/crypto-currency-app/static/css/main.a3f7c8a8.chunk.css.map",
-    "static/js/2.010d6084.chunk.js.LICENSE.txt": "/crypto-currency-app/static/js/2.010d6084.chunk.js.LICENSE.txt",
+    "static/css/main.ac104cfe.chunk.css.map": "/crypto-currency-app/static/css/main.ac104cfe.chunk.css.map",
+    "static/js/2.faacb16f.chunk.js.LICENSE.txt": "/crypto-currency-app/static/js/2.faacb16f.chunk.js.LICENSE.txt",
     "static/media/landing-video.66b3efb4.mp4": "/crypto-currency-app/static/media/landing-video.66b3efb4.mp4",
     "static/media/refresh.07b93c13.jpg": "/crypto-currency-app/static/media/refresh.07b93c13.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.972a643b.js",
-    "static/js/2.010d6084.chunk.js",
-    "static/css/main.a3f7c8a8.chunk.css",
-    "static/js/main.9b5590dd.chunk.js"
+    "static/js/2.faacb16f.chunk.js",
+    "static/css/main.ac104cfe.chunk.css",
+    "static/js/main.051cb20a.chunk.js"
   ]
 }
